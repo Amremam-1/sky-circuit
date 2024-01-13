@@ -33,7 +33,6 @@ const Banner = () => {
       spaceBetween={50}
       slidesPerView={1}
       onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
     >
       {images.map((item, index) => (
         <SwiperSlide key={index} className={styles["bannerSlide"]}>
