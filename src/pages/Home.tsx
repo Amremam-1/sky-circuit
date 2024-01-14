@@ -2,7 +2,7 @@ import { Col, Container, Row } from "react-bootstrap"
 import Banner from "../components/banner/Banner"
 import Helmet from "../components/helmet/Helmet"
 import styles from "../styles/home.module.css"
-import Services from "./services"
+import Services from "./Services"
 
 const Home = () => {
   return (
@@ -11,7 +11,7 @@ const Home = () => {
         <Banner />
       </div>
 
-      <section className={styles.services} >
+      <section className={styles.services}>
         <Container>
           <Row>
             <Col lg="12" className="text-center mb-5">
