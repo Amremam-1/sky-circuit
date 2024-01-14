@@ -1,5 +1,8 @@
+import { Col, Container, Row } from "react-bootstrap"
 import Banner from "../components/banner/Banner"
 import Helmet from "../components/helmet/Helmet"
+import styles from "../styles/home.module.css"
+import ServicesCart from "../components/ui/ServicesCart"
 
 const Home = () => {
   return (
@@ -7,6 +10,19 @@ const Home = () => {
       <div className="banner-main-area">
         <Banner />
       </div>
+
+      <section className={styles.services}>
+        <Container>
+          <Row>
+            <Col lg="12" className="text-center mb-5">
+              <span className="span-title">Our Services</span>
+              <h3 className="section-title">Quality Servicing Opportunity</h3>
+            </Col>
+            <ServicesCart />
+            
+          </Row>
+        </Container>
+      </section>
     </Helmet>
   )
 }

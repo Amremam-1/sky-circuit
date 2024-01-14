@@ -57,7 +57,6 @@
 }
 
 .btn {
-    border: none;
     background: var(--color-primary);
     color: #fff;
     position: relative;
@@ -66,7 +65,7 @@
     padding: 13px 20px;
     border-radius: 2px;
     font-size: 1.1rem;
-    position: relative;
+    /* position: relative; */
 }
 
 .btn::before {

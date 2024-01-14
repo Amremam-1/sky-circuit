@@ -67,6 +67,7 @@ body {
   font-weight: var(--p-regular);
   position: relative;
   overflow-x: hidden;
+  background: #F2F3F5;
   /* direction:ltr; */
 }
 
@@ -94,4 +95,23 @@ a {
 
 section {
   padding: 60px 0px;
+}
+
+.span-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  color: #FF6600;
+  text-transform: uppercase;
+  font-family: var(--font-primary);
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 61px;
+  color: #0C0A0A;
+  text-transform: uppercase;
+  margin-top: 5px;
 }

@@ -163,7 +163,6 @@
     padding: 13px 20px;
     border-radius: 2px;
     font-size: 1.1rem;
-    position: relative;
 }
 
 .get-info .btn::before {
@@ -192,6 +191,17 @@
     top: 0;
     z-index: 5;
     position: relative;
+}
+
+.sticky{
+    position: fixed;
+    top: 0;
+    display: block;
+    backdrop-filter: blur(9px);
+    width: 100%;
+    box-shadow: 0px 7px 18px #1810100d;
+    background: #fff;
+    z-index: 999;
 }
 
 .nav-header {

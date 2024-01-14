@@ -8,6 +8,7 @@ import { IoLocationOutline } from "react-icons/io5"
 import { Link } from "react-router-dom"
 import styles from "./navbar.module.css"
 import logo from "../../assets/logo.png"
+import { useEffect, useRef } from "react"
 
 const nav_Links = [
   {
@@ -33,117 +34,144 @@ const links = [
   { path: "contact", display: "Contact" },
 ]
 
-const navBar = () => (
-  <header className={styles["header-one"]}>
-    <div className={styles["header-top"]}>
-      <Container>
-        <Row>
-          <Col lg="12">
-            <div className={styles["header-top-wrapper"]}>
-              <div className={styles["left"]}>
-                <div className={styles["icon"]}>
-                  <MdElectricBolt color="#FF6600" size="20px" />
+const navBar = () => {
+  const headerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const stickyFunc = () => {
+      if (headerRef.current !== null)
+        if (
+          document.body.scrollTop > 210 ||
+          document.documentElement.scrollTop > 210
+        ) {
+          console.log("Adding sticky class")
+
+          headerRef.current.classList.add(styles.sticky)
+        } else {
+          headerRef.current.classList.remove(styles.sticky)
+        }
+    }
+
+    window.addEventListener("scroll", stickyFunc)
+    return () => {
+      window.removeEventListener("scroll", stickyFunc)
+    }
+  })
+  return (
+    <header className={styles["header-one"]}>
+      <div className={styles["header-top"]}>
+        <Container>
+          <Row>
+            <Col lg="12">
+              <div className={styles["header-top-wrapper"]}>
+                <div className={styles["left"]}>
+                  <div className={styles["icon"]}>
+                    <MdElectricBolt color="#FF6600" size="20px" />
+                  </div>
+                  <p>Express delivery and free returns within 24 hours</p>
                 </div>
-                <p>Express delivery and free returns within 24 hours</p>
+                <div className={styles["right"]}>
+                  <ul className={styles["menu"]}>
+                    {nav_Links.map((item, index) => (
+                      <li className="nav-item" key={index}>
+                        {item.display}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-              <div className={styles["right"]}>
-                <ul className={styles["menu"]}>
-                  {nav_Links.map((item, index) => (
-                    <li className="nav-item" key={index}>
-                      {item.display}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </Col>
-        </Row>
-      </Container>
-    </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
 
-    <div className="header-mid">
-      <Container>
-        <Row>
-          <Col lg="12">
-            <div className={styles["header-mid-one-wrapper"]}>
-              <div className={styles["logo-area"]}>
-                <Link to="">
-                  <img src={logo} alt="" />
-                </Link>
-              </div>
+      <div className="header-mid">
+        <Container>
+          <Row>
+            <Col lg="12">
+              <div className={styles["header-mid-one-wrapper"]}>
+                <div className={styles["logo-area"]}>
+                  <Link to="">
+                    <img src={logo} alt="" />
+                  </Link>
+                </div>
 
-              <div className={styles["header-right"]}>
-                <div className={styles["single-component"]}>
-                  <IoLocationOutline className={styles["icon-svg"]} />
+                <div className={styles["header-right"]}>
+                  <div className={styles["single-component"]}>
+                    <IoLocationOutline className={styles["icon-svg"]} />
 
-                  <div className={styles["info"]}>
-                    <span>Send Us Mail</span>
-                    <a href="#">22 Madi Ave, New York</a>
+                    <div className={styles["info"]}>
+                      <span>Send Us Mail</span>
+                      <a href="#">22 Madi Ave, New York</a>
+                    </div>
+                  </div>
+
+                  <div className={styles["single-component"]}>
+                    <MdOutlineEmail className={styles["icon-svg"]} />
+
+                    <div className={styles["info"]}>
+                      <span>Send Us Mail</span>
+                      <a href="#">elevate.cons@gmail</a>
+                    </div>
+                  </div>
+
+                  <div className={styles["get-info"]}>
+                    <a href="#" className={styles["btn"]}>
+                      GET A QUOTE
+                      <MdArrowOutward className={styles["icon"]} />
+                    </a>
                   </div>
                 </div>
-
-                <div className={styles["single-component"]}>
-                  <MdOutlineEmail className={styles["icon-svg"]} />
-
-                  <div className={styles["info"]}>
-                    <span>Send Us Mail</span>
-                    <a href="#">elevate.cons@gmail</a>
-                  </div>
-                </div>
-
-                <div className={styles["get-info"]}>
-                  <a href="#" className={styles["btn"]}>
-                    GET A QUOTE
-                    <MdArrowOutward className={styles["icon"]} />
-                  </a>
-                </div>
               </div>
-            </div>
-          </Col>
-        </Row>
-      </Container>
-    </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
 
-    <div className={styles["header-sticky"]}>
-      <Container>
-        <Row>
-          <Col lg="12">
-            <div className={styles["nav-header"]}>
-              <div className={styles["clip-path"]}></div>
-              <div className={styles["wrapper"]}>
-                <div className={styles["main-nav"]}>
-                  <nav>
-                    <ul>
-                      {links.map((item, index) => (
-                        <li className={styles["menu-item current"]} key={index}>
-                          <a
-                            href={item.path}
-                            className={styles["nav-item active"]}
+      <div className={styles["header-sticky"]} ref={headerRef}>
+        <Container>
+          <Row>
+            <Col lg="12">
+              <div className={styles["nav-header"]}>
+                <div className={styles["clip-path"]}></div>
+                <div className={styles["wrapper"]}>
+                  <div className={styles["main-nav"]}>
+                    <nav>
+                      <ul>
+                        {links.map((item, index) => (
+                          <li
+                            className={styles["menu-item current"]}
+                            key={index}
                           >
-                            {item.display}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </nav>
-                </div>
-
-                <div className={styles["btn-right"]}>
-                  <div className={styles["search-btn"]}>
-                    <FaSearch />
+                            <a
+                              href={item.path}
+                              className={styles["nav-item active"]}
+                            >
+                              {item.display}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </nav>
                   </div>
-                  <div className={styles["cart-icon"]}>
-                    <HiOutlineShoppingCart />
-                    <span className={styles["badge"]}>2</span>
+
+                  <div className={styles["btn-right"]}>
+                    <div className={styles["search-btn"]}>
+                      <FaSearch />
+                    </div>
+                    <div className={styles["cart-icon"]}>
+                      <HiOutlineShoppingCart />
+                      <span className={styles["badge"]}>2</span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </Col>
-        </Row>
-      </Container>
-    </div>
-  </header>
-)
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    </header>
+  )
+}
 
 export default navBar
