@@ -1,4 +1,4 @@
-import { Col, Container, Nav, Row } from "react-bootstrap"
+import { Col, Container,  Row } from "react-bootstrap"
 import { MdElectricBolt } from "react-icons/md"
 import { MdOutlineEmail } from "react-icons/md"
 import { HiOutlineShoppingCart } from "react-icons/hi"
