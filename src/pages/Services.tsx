@@ -1,11 +1,11 @@
-import styles from "./services.module.css"
+import styles from "../styles/services.module.css"
 import { Col, Container, Row } from "react-bootstrap"
-import service01 from "../../assets/service-1.jpg"
-import service02 from "../../assets/service-2.jpg"
-import service03 from "../../assets/service-3.jpg"
-import service04 from "../../assets/01.jpg"
+import service01 from "../assets/service-1.jpg"
+import service02 from "../assets/service-2.jpg"
+import service03 from "../assets/service-3.jpg"
+import About from "./About"
 
-const services = [
+const servicesItems = [
   {
     image: service01,
     title: "Sustainable System",
@@ -29,12 +29,12 @@ const services = [
   },
 ]
 
-const ServicesCart = () => {
+const services = () => {
   return (
     <>
-      <Container>
+      <Container id="service">
         <Row>
-          {services.map((item, index) => (
+          {servicesItems.map((item, index) => (
             <Col lg="4" md="6" sm="12" className="mb-3" key={index}>
               <div className={styles.serviceCart}>
                 <div className={styles.serviceImg}>
@@ -55,22 +55,9 @@ const ServicesCart = () => {
           ))}
         </Row>
       </Container>
-
-      <Container>
-        <Row>
-          <Col lg="12">
-            <div className={styles.wrapper}>
-              <div className={styles.wrapperImg}>
-                <img src={service04} alt="" />
-              </div>
-
-              <div className={styles.wrapperInfo}></div>
-            </div>
-          </Col>
-        </Row>
-      </Container>
+      <About />
     </>
   )
 }
 
-export default ServicesCart
+export default services

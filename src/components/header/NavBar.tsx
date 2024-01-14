@@ -1,4 +1,4 @@
-import { Col, Container,  Row } from "react-bootstrap"
+import { Col, Container, NavLink, Row } from "react-bootstrap"
 import { MdElectricBolt } from "react-icons/md"
 import { MdOutlineEmail } from "react-icons/md"
 import { HiOutlineShoppingCart } from "react-icons/hi"
@@ -8,7 +8,7 @@ import { IoLocationOutline } from "react-icons/io5"
 import { Link } from "react-router-dom"
 import styles from "./navbar.module.css"
 import logo from "../../assets/logo.png"
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 
 const nav_Links = [
   {
@@ -26,16 +26,21 @@ const nav_Links = [
 ]
 
 const links = [
-  { path: "home", display: "Home" },
-  { path: "service", display: "Service" },
-  { path: "about", display: "About" },
-  { path: "portfolio", display: "Portfolio" },
-  { path: "blog", display: "Blog" },
-  { path: "contact", display: "Contact" },
+  { id: "#home", display: "Home" },
+  { id: "#service", display: "Service" },
+  { id: "#about", display: "About" },
+  { id: "#portfolio", display: "Portfolio" },
+  { id: "#blog", display: "Blog" },
+  { id: "#contact", display: "Contact" },
 ]
 
 const navBar = () => {
   const headerRef = useRef<HTMLDivElement>(null)
+  const [activeIndex, setActiveIndex] = useState<number>()
+
+  const handleLinkClick = (index: number) => {
+    setActiveIndex(index)
+  }
 
   useEffect(() => {
     const stickyFunc = () => {
@@ -143,12 +148,15 @@ const navBar = () => {
                             className={styles["menu-item current"]}
                             key={index}
                           >
-                            <a
-                              href={item.path}
-                              className={styles["nav-item active"]}
+                            <NavLink
+                              href={item.id}
+                              className={`${styles["nav-item"]} ${
+                                index === activeIndex ? styles["active"] : ""
+                              }`}
+                              onClick={() => handleLinkClick(index)}
                             >
                               {item.display}
-                            </a>
+                            </NavLink>
                           </li>
                         ))}
                       </ul>
