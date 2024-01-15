@@ -3,6 +3,7 @@ import Banner from "../components/banner/Banner"
 import Helmet from "../components/helmet/Helmet"
 import styles from "../styles/home.module.css"
 import Services from "./Services"
+import Portfolio from "./Portfolio"
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
           </Row>
         </Container>
       </section>
+      <Portfolio />
     </Helmet>
   )
 }

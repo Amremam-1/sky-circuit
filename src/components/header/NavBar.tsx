@@ -46,8 +46,8 @@ const navBar = () => {
     const stickyFunc = () => {
       if (headerRef.current !== null)
         if (
-          document.body.scrollTop > 210 ||
-          document.documentElement.scrollTop > 210
+          document.body.scrollTop > 180 ||
+          document.documentElement.scrollTop > 180
         ) {
           console.log("Adding sticky class")
 
