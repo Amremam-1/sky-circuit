@@ -81,6 +81,17 @@ const Portfolio = () => {
           navigation
           pagination={{ clickable: true }}
           id="portfolio"
+          breakpoints={{
+            768: {
+              slidesPerView: 1, // Set the number of slides to 1 for screens larger than 768 pixels
+            },
+            480: {
+              slidesPerView: 1, // Set the number of slides to 1 for screens larger than 768 pixels
+            },
+            320: {
+              slidesPerView: 1, // Set the number of slides to 1 for screens larger than 768 pixels
+            },
+          }}
         >
           {images.map((slide) => (
             <SwiperSlide key={slide.id} className={styles.slide}>
@@ -103,55 +114,65 @@ const Portfolio = () => {
               <span className="span-title">TECHNICAL EXPART</span>
               <h3 className="section-title">OUR TECHNICAL EXPERTS</h3>
             </Col>
-            </Row>
+          </Row>
 
-            <Row>
-              <Col sm="12">
-                <Swiper
-                  modules={[Navigation, Pagination]}
-                  spaceBetween={30}
-                  slidesPerView={3}
-                  navigation
-                  pagination={{ clickable: true }}
-                  className={styles.swiper}
-                >
-                  {persons.map((person) => (
-                    <SwiperSlide key={person.id}>
-                      <div className={styles.team}>
-                        <div className={styles.wrapper}>
-                          <div className={styles.wrapperImg}>
-                            <img src={person.img} alt="" />
-                          </div>
+          <Row>
+            <Col sm="12">
+              <Swiper
+                modules={[Navigation, Pagination]}
+                spaceBetween={30}
+                slidesPerView={3}
+                navigation
+                pagination={{ clickable: true }}
+                breakpoints={{
+                  768: {
+                    slidesPerView: 1, // Set the number of slides to 1 for screens larger than 768 pixels
+                  },
+                  480: {
+                    slidesPerView: 1, // Set the number of slides to 1 for screens larger than 768 pixels
+                  },
+                  320: {
+                    slidesPerView: 1, // Set the number of slides to 1 for screens larger than 768 pixels
+                  },
+                }}
+                className={styles.swiper}
+              >
+                {persons.map((person) => (
+                  <SwiperSlide key={person.id}>
+                    <div className={styles.team}>
+                      <div className={styles.wrapper}>
+                        <div className={styles.wrapperImg}>
+                          <img src={person.img} alt="" />
+                        </div>
 
-                          <div className={styles.inner}>
-                            <a href="#" className={styles.name}>
-                              <h5>{person.name}</h5>
-                            </a>
+                        <div className={styles.inner}>
+                          <a href="#" className={styles.name}>
+                            <h5>{person.name}</h5>
+                          </a>
 
-                            <span className={styles.desig}>{person.desig}</span>
+                          <span className={styles.desig}>{person.desig}</span>
 
-                            <div className={styles.infoWrapper}>
-                              <div className={styles.single}>
-                                <AiOutlineMail className={styles.icon} />
+                          <div className={styles.infoWrapper}>
+                            <div className={styles.single}>
+                              <AiOutlineMail className={styles.icon} />
 
-                                <a href="#">{person.email}</a>
-                              </div>
+                              <a href="#">{person.email}</a>
+                            </div>
 
-                              <div className={styles.single}>
-                                <FiPhoneCall className={styles.icon} />
+                            <div className={styles.single}>
+                              <FiPhoneCall className={styles.icon} />
 
-                                <a href="#">{person.phone}</a>
-                              </div>
+                              <a href="#">{person.phone}</a>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
-              </Col>
-            </Row>
-
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </Col>
+          </Row>
         </Container>
       </section>
     </>
