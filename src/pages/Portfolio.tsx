@@ -103,53 +103,55 @@ const Portfolio = () => {
               <span className="span-title">TECHNICAL EXPART</span>
               <h3 className="section-title">OUR TECHNICAL EXPERTS</h3>
             </Col>
-          </Row>
-        </Container>
+            </Row>
 
-        <Container>
-            <Swiper
-              modules={[Navigation, Pagination]}
-              spaceBetween={30}
-              slidesPerView={3}
-              navigation
-              pagination={{ clickable: true }}
-            >
-              {persons.map((person) => (
-                <SwiperSlide>
+            <Row>
+              <Col sm="12">
+                <Swiper
+                  modules={[Navigation, Pagination]}
+                  spaceBetween={30}
+                  slidesPerView={3}
+                  navigation
+                  pagination={{ clickable: true }}
+                  className={styles.swiper}
+                >
+                  {persons.map((person) => (
+                    <SwiperSlide key={person.id}>
+                      <div className={styles.team}>
+                        <div className={styles.wrapper}>
+                          <div className={styles.wrapperImg}>
+                            <img src={person.img} alt="" />
+                          </div>
 
-                    <div className={styles.team}>
-                      <div className={styles.wrapper}>
-                        <div className={styles.wrapperImg}>
-                          <img src={person.img} alt="" />
-                        </div>
+                          <div className={styles.inner}>
+                            <a href="#" className={styles.name}>
+                              <h5>{person.name}</h5>
+                            </a>
 
-                        <div className={styles.inner}>
-                          <a href="#" className={styles.name}>
-                            <h5>{person.name}</h5>
-                          </a>
+                            <span className={styles.desig}>{person.desig}</span>
 
-                          <span className={styles.desig}>{person.desig}</span>
+                            <div className={styles.infoWrapper}>
+                              <div className={styles.single}>
+                                <AiOutlineMail className={styles.icon} />
 
-                          <div className={styles.infoWrapper}>
-                            <div className={styles.single}>
-                              <AiOutlineMail className={styles.icon} />
+                                <a href="#">{person.email}</a>
+                              </div>
 
-                              <a href="#">{person.email}</a>
-                            </div>
+                              <div className={styles.single}>
+                                <FiPhoneCall className={styles.icon} />
 
-                            <div className={styles.single}>
-                              <FiPhoneCall className={styles.icon} />
-
-                              <a href="#">{person.phone}</a>
+                                <a href="#">{person.phone}</a>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </Col>
+            </Row>
 
-                </SwiperSlide>
-              ))}
-            </Swiper>
         </Container>
       </section>
     </>

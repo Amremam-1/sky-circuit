@@ -45,13 +45,13 @@ const Banner = () => {
             />
             <div className={styles["heading"]}>
               <h5>{item.title}</h5>
-              <h1>
+              <h2>
                 We’re Providing
                 <br />
                 Industry Roofing
                 <br />
                 Solution
-              </h1>
+              </h2>
 
               <div className={styles.contact}>
                 <a href="#" className={styles.btn}>
