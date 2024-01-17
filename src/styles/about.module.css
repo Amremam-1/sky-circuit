@@ -227,6 +227,7 @@
         font-size: 30px;
         line-height: 45px;
     }
+
     .jurney {
         flex-direction: column;
         align-items: start;
@@ -239,6 +240,7 @@
         font-size: 25px;
         line-height: 45px;
     }
+
     .start .nav li .navLink.active::after {
         display: none;
     }
@@ -251,9 +253,11 @@
         font-size: 18px;
         line-height: 30px;
     }
+
     .start .nav li .navLink.active::after {
         display: none;
     }
+
     .jurney {
         flex-direction: column;
         align-items: start;
