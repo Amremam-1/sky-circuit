@@ -115,3 +115,9 @@ section {
   text-transform: uppercase;
   margin-top: 5px;
 }
+
+@media( max-width: 768px){
+  .section-title{
+    font-size: 30px;
+  }
+}

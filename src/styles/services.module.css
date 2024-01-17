@@ -1,7 +1,6 @@
 .serviceCart {
     background: #FFFFFF;
     border-radius: 5px;
-
 }
 
 .serviceImg {
@@ -112,66 +111,3 @@
 }
 
 
-.wrapper {
-    display: flex;
-    background: #fff;
-    margin-top: 100px;
-    padding: 5px;
-}
-
-.wrapperImg {
-    position: relative;
-    flex: 0.5;
-}
-
-.wrapperImg img {
-    width: 100%;
-}
-
-.detail {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: #0C0A0A;
-    padding: 40px 50px;
-    border-radius: 3px;
-}
-
-.detail h5 {
-    font-family: "Titillium Web", sans-serif;
-    font-size: var(--h5);
-    line-height: 1.24;
-    color: #fff;
-    font-weight: var(--s-bold);
-}
-
-.detail a {
-    display: flex;
-    align-items: center;
-    color: #fff;
-    transition: 0.3s;
-    margin-top: 15px;
-}
-
-.detail a:hover {
-    color: var(--color-primary);
-}
-
-.detail a .icon {
-    margin-left: 10px;
-    font-size: 24px;
-    color: #fff;
-    height: 25px;
-    width: 25px;
-    border-radius: 5px;
-    background: var(--color-primary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    padding: 6px;
-}
-
-.wrapperInfo {
-    flex: 0.5;
-}

@@ -55,7 +55,6 @@ const services = () => {
           ))}
         </Row>
       </Container>
-      <About />
     </>
   )
 }

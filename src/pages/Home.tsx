@@ -4,6 +4,7 @@ import Helmet from "../components/helmet/Helmet"
 import styles from "../styles/home.module.css"
 import Services from "./Services"
 import Portfolio from "./Portfolio"
+import About from "./About"
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
           </Row>
         </Container>
       </section>
+      <About />
       <Portfolio />
     </Helmet>
   )

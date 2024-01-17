@@ -49,8 +49,6 @@ const navBar = () => {
           document.body.scrollTop > 180 ||
           document.documentElement.scrollTop > 180
         ) {
-          console.log("Adding sticky class")
-
           headerRef.current.classList.add(styles.sticky)
         } else {
           headerRef.current.classList.remove(styles.sticky)

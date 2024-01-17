@@ -67,7 +67,7 @@ const Portfolio = () => {
       <section className={styles.services}>
         <Container>
           <Row>
-            <Col lg="12" className="mb-5 text-center">
+            <Col lg="12" className={styles.title}>
               <span className="span-title">LATEST PROJECTS</span>
               <h3 className="section-title">OUR RECENT WORK</h3>
             </Col>
@@ -82,6 +82,15 @@ const Portfolio = () => {
           pagination={{ clickable: true }}
           id="portfolio"
           breakpoints={{
+            2560: {
+              slidesPerView: 3, // Set the number of slides to 1 for screens larger than 768 pixels
+            },
+            1440: {
+              slidesPerView: 3, // Set the number of slides to 1 for screens larger than 768 pixels
+            },
+            1024: {
+              slidesPerView: 3, // Set the number of slides to 1 for screens larger than 768 pixels
+            },
             768: {
               slidesPerView: 1, // Set the number of slides to 1 for screens larger than 768 pixels
             },
@@ -110,14 +119,14 @@ const Portfolio = () => {
       <section>
         <Container>
           <Row>
-            <Col lg="12" className="mb-5 text-center">
+            <Col lg="12" className={styles.title}>
               <span className="span-title">TECHNICAL EXPART</span>
               <h3 className="section-title">OUR TECHNICAL EXPERTS</h3>
             </Col>
           </Row>
 
           <Row>
-            <Col sm="12">
+            <Col>
               <Swiper
                 modules={[Navigation, Pagination]}
                 spaceBetween={30}
@@ -125,6 +134,15 @@ const Portfolio = () => {
                 navigation
                 pagination={{ clickable: true }}
                 breakpoints={{
+                  2560: {
+                    slidesPerView: 3, // Set the number of slides to 1 for screens larger than 768 pixels
+                  },
+                  1440: {
+                    slidesPerView: 3, // Set the number of slides to 1 for screens larger than 768 pixels
+                  },
+                  1024: {
+                    slidesPerView: 3, // Set the number of slides to 1 for screens larger than 768 pixels
+                  },
                   768: {
                     slidesPerView: 1, // Set the number of slides to 1 for screens larger than 768 pixels
                   },

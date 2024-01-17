@@ -3,10 +3,13 @@
 }
 
 .slide a img {
-    width: 100%;
+    max-width: 100%;
     transition: 0.6s;
     overflow: hidden;
 }
+
+
+
 
 .slide a img:hover {
     transform: scale(1.1);
@@ -46,6 +49,7 @@
     background: linear-gradient(180deg, #FFFFFF 0%, #F2F3F5 100%);
     padding: 30px;
     padding-bottom: 180px !important;
+    /* width: 100%; */
 }
 
 .team .wrapper {
@@ -62,9 +66,9 @@
     border: 0;
     vertical-align: middle;
     max-width: 100%;
-    width: 100%;
     height: auto;
 }
+
 
 .wrapperImg img:hover {
     transform: scale(1.1);
@@ -151,4 +155,25 @@
     max-width: max-content;
     margin: auto;
     font-size: 0.8rem;
+}
+
+.title {
+    margin-bottom: 5rem;
+    text-align: center !important;
+}
+
+@media (max-width: 768px) {
+    .wrapperImg img {
+
+        width: 100%;
+    }
+
+    .slide a img {
+        width: 100%;
+    }
+
+    .title {
+        text-align: start !important;
+    }
+
 }
