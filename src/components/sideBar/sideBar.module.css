@@ -27,6 +27,8 @@
     }
 }
 
+
+
 .side_bar.open {
     transform: translateX(0);
 }
