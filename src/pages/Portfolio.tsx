@@ -16,6 +16,7 @@ import person01 from "../assets/person01.jpg"
 import person02 from "../assets/person02.jpg"
 import person03 from "../assets/person03.jpg"
 import person04 from "../assets/person04.jpg"
+import LatestProjects from "../components/latestProjects/LatestProjects"
 
 const persons = [
   {
@@ -193,6 +194,8 @@ const Portfolio = () => {
           </Row>
         </Container>
       </section>
+
+      <LatestProjects />
     </>
   )
 }

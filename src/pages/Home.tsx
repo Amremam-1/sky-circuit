@@ -5,6 +5,7 @@ import styles from "../styles/home.module.css"
 import Services from "./Services"
 import Portfolio from "./Portfolio"
 import About from "./About"
+import Blog from "./Blog"
 
 const Home = () => {
   return (
@@ -26,6 +27,7 @@ const Home = () => {
       </section>
       <About />
       <Portfolio />
+      <Blog />
     </Helmet>
   )
 }
