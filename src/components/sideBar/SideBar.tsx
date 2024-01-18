@@ -15,7 +15,6 @@ const SideBar = ({ isOpen }: { isOpen: boolean }) => {
   }
 
   useEffect(() => {
-    // تحديث حالة القائمة عندما يتغير prop isOpen
     setMenuOpen(isOpen)
   }, [isOpen])
 
