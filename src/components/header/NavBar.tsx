@@ -2,12 +2,13 @@ import { Col, Container, NavLink, Row } from "react-bootstrap"
 import { MdElectricBolt } from "react-icons/md"
 import { MdOutlineEmail } from "react-icons/md"
 import { HiOutlineShoppingCart } from "react-icons/hi"
-import { MdArrowOutward } from "react-icons/md"
+import { GoArrowUpLeft } from "react-icons/go"
+
 import { FaSearch } from "react-icons/fa"
 import { IoLocationOutline } from "react-icons/io5"
 import { Link } from "react-router-dom"
 import styles from "./navbar.module.css"
-import logo from "../../assets/logo.png"
+import logo from "../../assets/easy-logo-transparent.png"
 import { useEffect, useRef, useState } from "react"
 import { FiMenu } from "react-icons/fi"
 import SideBar from "../sideBar/SideBar"
@@ -15,25 +16,26 @@ import SideBar from "../sideBar/SideBar"
 const nav_Links = [
   {
     path: "#",
-    display: "Careers",
+    display: "مسارات مهنية",
   },
   {
     path: "#",
-    display: "News & Media",
+    display: "الأخبار ووسائل الإعلام",
   },
   {
     path: "#",
-    display: "Contact",
+    display: "اتصل بنا",
   },
 ]
 
 export const links = [
-  { id: "#home", display: "Home" },
-  { id: "#service", display: "Service" },
-  { id: "#about", display: "About" },
-  { id: "#portfolio", display: "Portfolio" },
-  { id: "#blog", display: "Blog" },
-  { id: "#contact", display: "Contact" },
+  { id: "#home", display: "الرئيسية" },
+  { id: "#pages", display: "صفحات" },
+  { id: "#service", display: "خدمات" },
+  { id: "#about", display: "حول" },
+  { id: "#portfolio", display: "الأعمال " },
+  { id: "#blog", display: "مدونة" },
+  { id: "#contact", display: "اتصل بنا" },
 ]
 
 const navBar = () => {
@@ -77,10 +79,14 @@ const navBar = () => {
               <Col lg="12">
                 <div className={styles["header-top-wrapper"]}>
                   <div className={styles["left"]}>
+                    <p>توصيل سريع وإرجاع مجاني في غضون 24 ساعة</p>
                     <div className={styles["icon"]}>
-                      <MdElectricBolt color="#FF6600" size="20px" />
+                      <MdElectricBolt
+                        color="#FF6600"
+                        size="20px"
+                        className="ms-3"
+                      />
                     </div>
-                    <p>Express delivery and free returns within 24 hours</p>
                   </div>
                   <div className={styles["right"]}>
                     <ul className={styles["menu"]}>
@@ -104,7 +110,7 @@ const navBar = () => {
                 <div className={styles["header-mid-one-wrapper"]}>
                   <div className={styles["logo-area"]}>
                     <Link to="">
-                      <img src={logo} alt="" />
+                      <img src={logo} alt=""/>
                     </Link>
                   </div>
 
@@ -113,8 +119,10 @@ const navBar = () => {
                       <IoLocationOutline className={styles["icon-svg"]} />
 
                       <div className={styles["info"]}>
-                        <span>Send Us Mail</span>
-                        <a href="#">22 Madi Ave, New York</a>
+                        <span>أرسل لنا رسالة</span>
+                        <a href="#">
+                          الدمام الخضريه طريق الظهران الجبيل السريع
+                        </a>
                       </div>
                     </div>
 
@@ -122,15 +130,15 @@ const navBar = () => {
                       <MdOutlineEmail className={styles["icon-svg"]} />
 
                       <div className={styles["info"]}>
-                        <span>Send Us Mail</span>
+                        <span>أرسل لنا بريدا</span>
                         <a href="#">elevate.cons@gmail</a>
                       </div>
                     </div>
 
                     <div className={styles["get-info"]}>
                       <a href="#" className={styles["btn"]}>
-                        GET A QUOTE
-                        <MdArrowOutward className={styles["icon"]} />
+                        احصل على عرض أسعار
+                        <GoArrowUpLeft className={styles["icons"]} />
                       </a>
 
                       <div className={styles.menuArea} onClick={toggleSideBar}>
@@ -173,16 +181,6 @@ const navBar = () => {
                         </ul>
                       </nav>
                     </div>
-
-                    <div className={styles["btn-right"]}>
-                      <div className={styles["search-btn"]}>
-                        <FaSearch />
-                      </div>
-                      <div className={styles["cart-icon"]}>
-                        <HiOutlineShoppingCart />
-                        <span className={styles["badge"]}>2</span>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </Col>
@@ -191,7 +189,7 @@ const navBar = () => {
         </div>
       </header>
 
-      <SideBar isOpen={isSideBarOpen}/>
+      <SideBar isOpen={isSideBarOpen} />
     </>
   )
 }

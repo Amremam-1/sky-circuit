@@ -32,7 +32,7 @@
 .left::after {
     position: absolute;
     content: "";
-    right: 0;
+    left: 0;
     height: 67px;
     width: 1px;
     background: #d1d1d1;
@@ -75,12 +75,13 @@
 .right .menu li::after {
     position: absolute;
     content: "";
-    right: 0;
+    left: 0;
     height: 67px;
     width: 1px;
     top: 50%;
     background: #d1d1d1;
     transform: rotate(11deg) translateY(-50%);
+    margin-left: -20px;
 }
 
 .header-mid-one-wrapper {
@@ -89,7 +90,15 @@
     justify-content: space-between;
     padding: 30px 0;
 }
+.logo-area img{
+    width: 150px;
+}
 
+@media (max-width: 768px){
+    .logo-area img{
+        width: 100px;
+    }
+}
 .header-right {
     display: flex;
     align-items: center;
@@ -151,6 +160,7 @@
 .get-info {
     display: flex;
     align-items: center;
+    gap: 30px;
 }
 
 /* Menu */
@@ -212,7 +222,7 @@
     top: 0;
 }
 
-.get-info .btn .icon {
+.get-info .btn .icons {
     font-size: 23px;
     margin-left: 5px;
 }

@@ -158,7 +158,8 @@
 }
 
 .title {
-    margin-bottom: 5rem;
+    padding: 3rem;
+    margin-top: 3rem;
     text-align: center !important;
 }
 

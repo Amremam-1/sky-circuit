@@ -8,21 +8,21 @@ import About from "./About"
 const servicesItems = [
   {
     image: service01,
-    title: "Sustainable System",
+    title: "نظام مستدام",
     discription:
       "Urabitur lobortis mauris placerat quam netus litora eros purus,",
     content: "01",
   },
   {
     image: service02,
-    title: "Property Maintenance",
+    title: "صيانة العقارات",
     discription:
       "Urabitur lobortis mauris placerat quam netus litora eros purus,",
     content: "02",
   },
   {
     image: service03,
-    title: "Virtual design & build",
+    title: "التصميم والإنشاء الافتراضي",
     discription:
       "Urabitur lobortis mauris placerat quam netus litora eros purus,",
     content: "03",
@@ -47,7 +47,7 @@ const services = () => {
                   <p>{item.discription}</p>
 
                   <button className={styles.btn}>
-                    <a href="#">View Service</a>
+                    <a href="#">عرض الخدمة</a>
                   </button>
                 </div>
               </div>

@@ -17,9 +17,9 @@ const Home = () => {
       <section className={styles.services}>
         <Container>
           <Row>
-            <Col lg="12" className="text-center mb-5">
-              <span className="span-title">Our Services</span>
-              <h3 className="section-title">Quality Servicing Opportunity</h3>
+            <Col lg="12" className="text-center p-5" >
+              <span className="span-title">خدماتنا</span>
+              <h3 className="section-title">فرصة تقديم خدمة عالية الجودة</h3>
             </Col>
             <Services />
           </Row>

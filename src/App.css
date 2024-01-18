@@ -1,5 +1,5 @@
 /* google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@200;300;400;500;600;700;800&family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap');
 
 /*  css variables */
 :root {
@@ -36,8 +36,8 @@
   --s-extra-bold: 800;
   --s-black: 900;
   --transition: 0.3s;
-  --font-primary: "Titillium Web", sans-serif;
-  --font-secondary: "Archivo", sans-serif;
+  --font-primary: 'Cairo', sans-serif;
+  --font-secondary: 'Cairo', sans-serif;
   --font-size-b1: 16px;
   --font-size-b2: 16px;
   --font-size-b3: 22px;
@@ -62,13 +62,13 @@
 body {
   font-size: var(--font-size-b1);
   line-height: var(--line-height-b1);
-  font-family: "Archivo", sans-serif;
+  font-family: "Cairo", sans-serif;
   color: var(--color-body);
   font-weight: var(--p-regular);
   position: relative;
   overflow-x: hidden;
   background: #F2F3F5;
-  /* direction:ltr; */
+  direction: rtl;
 }
 
 h1,
@@ -98,8 +98,9 @@ section {
 }
 
 .span-title {
+  padding-top: 60px;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 26px;
   line-height: 24px;
   letter-spacing: 0.1em;
   color: #FF6600;
@@ -116,8 +117,8 @@ section {
   margin-top: 5px;
 }
 
-@media( max-width: 768px){
-  .section-title{
+@media(max-width: 768px) {
+  .section-title {
     font-size: 30px;
   }
 }

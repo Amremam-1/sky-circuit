@@ -1,7 +1,8 @@
 import { Container, Row, Col } from "react-bootstrap"
 import styles from "../styles/about.module.css"
 import service04 from "../assets/01.jpg"
-import { FaArrowRight } from "react-icons/fa6"
+import { FaArrowLeft } from "react-icons/fa"
+
 import { useState } from "react"
 import { FaCheck } from "react-icons/fa"
 import { LuPhoneCall } from "react-icons/lu"
@@ -32,26 +33,26 @@ const About = () => {
                   <span>3526</span>
                 </h3>
 
-                <span className={styles.sub}>STARTED JOURNEY</span>
+                <span className={styles.sub}>بدأ الرحلة</span>
               </div>
               <div className={styles.right}>
                 <div className={styles.single}>
-                  <FaCheck className={styles.icon}/>
-                  <span>Emerjency solution anytime</span>
+                  <span>حلاً طارئًا في أي وقت</span>
+                  <FaCheck className={styles.icon} />
                 </div>
                 <div className={styles.single}>
-                  <FaCheck className={styles.icon}/>
-                  <span>Affordable price upto 2 years</span>
+                  <span>سعر مناسب لمدة تصل إلى 2 سنة</span>
+                  <FaCheck className={styles.icon} />
                 </div>
                 <div className={styles.single}>
-                  <FaCheck className={styles.icon}/>
-                  <span> Reliable & Experienced Team</span>
+                  <span>فريق موثوق وذو خبرة</span>
+                  <FaCheck className={styles.icon} />
                 </div>
               </div>
             </div>
 
             <button className={styles.btn}>
-              <a href="#">Get STARTED</a>
+              <a href="#">إبدا الان</a>
             </button>
           </>
         )
@@ -70,26 +71,26 @@ const About = () => {
                   <span>2026</span>
                 </h3>
 
-                <span className={styles.sub}>STARTED JOURNEY</span>
+                <span className={styles.sub}>بدأ الرحلة</span>
               </div>
               <div className={styles.right}>
                 <div className={styles.single}>
-                  <FaCheck className={styles.icon}/>
-                  <span>Emerjency solution anytime</span>
+                  <FaCheck className={styles.icon} />
+                  <span>حلاً طارئًا في أي وقت</span>
                 </div>
                 <div className={styles.single}>
-                  <FaCheck className={styles.icon}/>
-                  <span>Affordable price upto 2 years</span>
+                  <FaCheck className={styles.icon} />
+                  <span>سعر مناسب لمدة تصل إلى 2 سنة</span>
                 </div>
                 <div className={styles.single}>
-                  <FaCheck className={styles.icon}/>
-                  <span> Reliable & Experienced Team</span>
+                  <FaCheck className={styles.icon} />
+                  <span>فريق موثوق وذو خبرة</span>
                 </div>
               </div>
             </div>
 
             <button className={styles.btn}>
-              <a href="#">Get STARTED</a>
+              <a href="#">إبدا الان</a>
             </button>
           </>
         )
@@ -107,7 +108,7 @@ const About = () => {
                   <span>1026</span>
                 </h3>
 
-                <span className={styles.sub}>STARTED JOURNEY</span>
+                <span className={styles.sub}>بدأ الرحلة</span>
               </div>
               <div className={styles.right}>
                 <div className={styles.single}>
@@ -116,12 +117,12 @@ const About = () => {
                   <span>+880123456564</span>
                 </div>
                 <div className={styles.single}>
-                  <MdOutlineEmail className={styles.icon}/>
+                  <MdOutlineEmail className={styles.icon} />
 
                   <span>exalple@info.com</span>
                 </div>
                 <div className={styles.single}>
-                  <IoLocationOutline className={styles.icon}/>
+                  <IoLocationOutline className={styles.icon} />
 
                   <span>22 Madi Ave, New York</span>
                 </div>
@@ -129,7 +130,7 @@ const About = () => {
             </div>
 
             <button className={styles.btn}>
-              <a href="#">Get STARTED</a>
+              <a href="#">إبدا الان</a>
             </button>
           </>
         )
@@ -148,23 +149,21 @@ const About = () => {
 
               <div className={styles.detail}>
                 <h5>
-                  Leading Developer Of Commercial <br />
-                  &amp; Residential Projects
+                  المُطور الرائد للمشاريع التجارية <br />
+                  والسكنية
                 </h5>
 
                 <a href="#">
-                  Read More
-                  <FaArrowRight className={styles.icon} />
+                  اقرأ المزيد
+                  <FaArrowLeft className={styles.icon} />
                 </a>
               </div>
             </div>
 
             <div className={styles.wrapperInfo}>
               <div className={styles.leftTitle}>
-                <span>Latest Projects</span>
-                <h3 className={styles.title}>
-                  We Are Qualified In Every Working Departments
-                </h3>
+                <span>أحدث المشاريع</span>
+                <h3 className={styles.title}>نحن مؤهلون في كل أقسام العمل</h3>
               </div>
 
               <div className={styles.start}>
@@ -176,7 +175,7 @@ const About = () => {
                       }`}
                       onClick={() => handleButton("About")}
                     >
-                      About
+                      حول
                     </button>
                   </li>
                   <li className={styles.navItem}>
@@ -186,7 +185,7 @@ const About = () => {
                       }`}
                       onClick={() => handleButton("Vision")}
                     >
-                      Vision
+                      رؤية
                     </button>
                   </li>
                   <li className={styles.navItem}>
@@ -196,7 +195,7 @@ const About = () => {
                       }`}
                       onClick={() => handleButton("Contact")}
                     >
-                      Contact
+                      اتصل بنا
                     </button>
                   </li>
                 </ul>
