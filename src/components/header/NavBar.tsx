@@ -9,6 +9,8 @@ import { Link } from "react-router-dom"
 import styles from "./navbar.module.css"
 import logo from "../../assets/logo.png"
 import { useEffect, useRef, useState } from "react"
+import { FiMenu } from "react-icons/fi"
+import SideBar from "../sideBar/SideBar"
 
 const nav_Links = [
   {
@@ -25,7 +27,7 @@ const nav_Links = [
   },
 ]
 
-const links = [
+export const links = [
   { id: "#home", display: "Home" },
   { id: "#service", display: "Service" },
   { id: "#about", display: "About" },
@@ -37,9 +39,15 @@ const links = [
 const navBar = () => {
   const headerRef = useRef<HTMLDivElement>(null)
   const [activeIndex, setActiveIndex] = useState<number>()
+  const [isSideBarOpen, setSideBarOpen] = useState(false)
 
   const handleLinkClick = (index: number) => {
     setActiveIndex(index)
+    setSideBarOpen(false)
+  }
+
+  const toggleSideBar = () => {
+    setSideBarOpen(!isSideBarOpen)
   }
 
   useEffect(() => {
@@ -61,122 +69,130 @@ const navBar = () => {
     }
   })
   return (
-    <header className={styles["header-one"]}>
-      <div className={styles["header-top"]}>
-        <Container>
-          <Row>
-            <Col lg="12">
-              <div className={styles["header-top-wrapper"]}>
-                <div className={styles["left"]}>
-                  <div className={styles["icon"]}>
-                    <MdElectricBolt color="#FF6600" size="20px" />
+    <>
+      <header className={styles["header-one"]}>
+        <div className={styles["header-top"]}>
+          <Container>
+            <Row>
+              <Col lg="12">
+                <div className={styles["header-top-wrapper"]}>
+                  <div className={styles["left"]}>
+                    <div className={styles["icon"]}>
+                      <MdElectricBolt color="#FF6600" size="20px" />
+                    </div>
+                    <p>Express delivery and free returns within 24 hours</p>
                   </div>
-                  <p>Express delivery and free returns within 24 hours</p>
+                  <div className={styles["right"]}>
+                    <ul className={styles["menu"]}>
+                      {nav_Links.map((item, index) => (
+                        <li className="nav-item" key={index}>
+                          {item.display}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-                <div className={styles["right"]}>
-                  <ul className={styles["menu"]}>
-                    {nav_Links.map((item, index) => (
-                      <li className="nav-item" key={index}>
-                        {item.display}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </div>
+              </Col>
+            </Row>
+          </Container>
+        </div>
 
-      <div className="header-mid">
-        <Container>
-          <Row>
-            <Col lg="12">
-              <div className={styles["header-mid-one-wrapper"]}>
-                <div className={styles["logo-area"]}>
-                  <Link to="">
-                    <img src={logo} alt="" />
-                  </Link>
-                </div>
+        <div className="header-mid">
+          <Container>
+            <Row>
+              <Col lg="12">
+                <div className={styles["header-mid-one-wrapper"]}>
+                  <div className={styles["logo-area"]}>
+                    <Link to="">
+                      <img src={logo} alt="" />
+                    </Link>
+                  </div>
 
-                <div className={styles["header-right"]}>
-                  <div className={styles["single-component"]}>
-                    <IoLocationOutline className={styles["icon-svg"]} />
+                  <div className={styles["header-right"]}>
+                    <div className={styles["single-component"]}>
+                      <IoLocationOutline className={styles["icon-svg"]} />
 
-                    <div className={styles["info"]}>
-                      <span>Send Us Mail</span>
-                      <a href="#">22 Madi Ave, New York</a>
+                      <div className={styles["info"]}>
+                        <span>Send Us Mail</span>
+                        <a href="#">22 Madi Ave, New York</a>
+                      </div>
+                    </div>
+
+                    <div className={styles["single-component"]}>
+                      <MdOutlineEmail className={styles["icon-svg"]} />
+
+                      <div className={styles["info"]}>
+                        <span>Send Us Mail</span>
+                        <a href="#">elevate.cons@gmail</a>
+                      </div>
+                    </div>
+
+                    <div className={styles["get-info"]}>
+                      <a href="#" className={styles["btn"]}>
+                        GET A QUOTE
+                        <MdArrowOutward className={styles["icon"]} />
+                      </a>
+
+                      <div className={styles.menuArea} onClick={toggleSideBar}>
+                        <FiMenu className={styles.menuAreaIcon} />
+                      </div>
                     </div>
                   </div>
-
-                  <div className={styles["single-component"]}>
-                    <MdOutlineEmail className={styles["icon-svg"]} />
-
-                    <div className={styles["info"]}>
-                      <span>Send Us Mail</span>
-                      <a href="#">elevate.cons@gmail</a>
-                    </div>
-                  </div>
-
-                  <div className={styles["get-info"]}>
-                    <a href="#" className={styles["btn"]}>
-                      GET A QUOTE
-                      <MdArrowOutward className={styles["icon"]} />
-                    </a>
-                  </div>
                 </div>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </div>
+              </Col>
+            </Row>
+          </Container>
+        </div>
 
-      <div className={styles["header-sticky"]} ref={headerRef}>
-        <Container>
-          <Row>
-            <Col lg="12">
-              <div className={styles["nav-header"]}>
-                <div className={styles["clip-path"]}></div>
-                <div className={styles["wrapper"]}>
-                  <div className={styles["main-nav"]}>
-                    <nav>
-                      <ul>
-                        {links.map((item, index) => (
-                          <li
-                            className={styles["menu-item current"]}
-                            key={index}
-                          >
-                            <NavLink
-                              href={item.id}
-                              className={`${styles["nav-item"]} ${
-                                index === activeIndex ? styles["active"] : ""
-                              }`}
-                              onClick={() => handleLinkClick(index)}
+        <div className={styles["header-sticky"]} ref={headerRef}>
+          <Container>
+            <Row>
+              <Col lg="12">
+                <div className={styles["nav-header"]}>
+                  <div className={styles["clip-path"]}></div>
+                  <div className={styles["wrapper"]}>
+                    <div className={styles["main-nav"]}>
+                      <nav>
+                        <ul>
+                          {links.map((item, index) => (
+                            <li
+                              className={styles["menu-item current"]}
+                              key={index}
                             >
-                              {item.display}
-                            </NavLink>
-                          </li>
-                        ))}
-                      </ul>
-                    </nav>
-                  </div>
-
-                  <div className={styles["btn-right"]}>
-                    <div className={styles["search-btn"]}>
-                      <FaSearch />
+                              <NavLink
+                                href={item.id}
+                                className={`${styles["nav-item"]} ${
+                                  index === activeIndex ? styles["active"] : ""
+                                }`}
+                                onClick={() => handleLinkClick(index)}
+                              >
+                                {item.display}
+                              </NavLink>
+                            </li>
+                          ))}
+                        </ul>
+                      </nav>
                     </div>
-                    <div className={styles["cart-icon"]}>
-                      <HiOutlineShoppingCart />
-                      <span className={styles["badge"]}>2</span>
+
+                    <div className={styles["btn-right"]}>
+                      <div className={styles["search-btn"]}>
+                        <FaSearch />
+                      </div>
+                      <div className={styles["cart-icon"]}>
+                        <HiOutlineShoppingCart />
+                        <span className={styles["badge"]}>2</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </div>
-    </header>
+              </Col>
+            </Row>
+          </Container>
+        </div>
+      </header>
+
+      <SideBar isOpen={isSideBarOpen}/>
+    </>
   )
 }
 
