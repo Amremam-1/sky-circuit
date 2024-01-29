@@ -7,7 +7,7 @@
     padding: 40px 30px;
     padding-top: 50px;
     height: 100%;
-    display: block;
+    /* display: block; */
     background-color: white;
     backdrop-filter: blur(7px);
     z-index: 1900;
@@ -20,7 +20,7 @@
     transition: transform 0.3s ease;
 }
 
-@media (max-width : 575px){
+@media (max-width : 991px) {
     .side_bar {
         width: 320px;
         overflow-y: auto;
