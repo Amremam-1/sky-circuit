@@ -9,18 +9,17 @@ import { BiSolidPhoneCall } from "react-icons/bi"
 const images = [
   {
     image: banner01,
-    title: "نرحب بك في إيزي",
-
+    title: "Welcome You To Elevate",
     interval: 1500,
   },
   {
     image: banner02,
-    title: "نرحب بك في إيزي",
+    title: "Welcome You To Elevate",
     interval: 500,
   },
   {
     image: banner03,
-    title: "نرحب بك في إيزي",
+    title: "Welcome You To Elevate",
     interval: 2500,
   },
 ]
@@ -41,17 +40,23 @@ const Banner = () => {
               src={item.image}
               alt={item.title}
             />
-            <div className={styles["heading"]}>
+            <div
+              className={styles["heading"]}
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
               <h5>{item.title}</h5>
               <h2>
-                صيانه وأعطال جميع أنواع المصاعد
-                <br />
-                عقود سنوي ونصف سنوي
-                <br />
-                وزيارات قطع الغيار الإيطالي والتركي
+                We’re Providing <br />
+                Building Leading <br />
+                Solution
               </h2>
 
-              <div className={styles.contact}>
+              <div
+                className={styles.contact}
+                data-aos="fade-up"
+                data-aos-duration="2000"
+              >
                 <a href="#" className={styles.btn}>
                   GET STARTED
                 </a>

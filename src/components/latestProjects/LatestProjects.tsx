@@ -12,7 +12,11 @@ const LatestProjects = () => {
       <Container>
         <Row>
           <div className={styles.container}>
-            <div className={styles.top}>
+            <div
+              className={styles.top}
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
               <p className={styles.smTitle}>LATEST PROJECTS</p>
               <h3 className={styles.title}>
                 EXCELLENCE DRIVEN FOR GETTING
@@ -20,7 +24,11 @@ const LatestProjects = () => {
                 UNRIVALED RESULTS.
               </h3>
             </div>
-            <ul className={styles.projectsList}>
+            <ul
+              className={styles.projectsList}
+              data-aos="fade-up"
+              data-aos-duration="3000"
+            >
               <ProjectItem img={svg1} num={3526} text="Tons Of Customers" />
               <ProjectItem img={svg2} num={3024} text="Compleated Project" />
               <ProjectItem img={svg3} num={325} text="Team Members" />

@@ -1,21 +1,27 @@
 section {
-    padding: 0;
+    padding-top: 50px;
+    padding-right: 40px;
+    padding-left: 40px;
 }
+
 .latestProjects {
     background-image: url('../../assets/lastes.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    margin-top: 120px; 
+    margin-top: 120px;
 }
- @media (max-width: 576px) {
-     .latestProjects {
-         margin-top: 60px; 
-      }
- }
+
+@media (max-width: 576px) {
+    .latestProjects {
+        margin-top: 60px;
+    }
+}
+
 .latestProjects .container {
     padding: 120px 0;
 }
+
 /* .latestProjects .top {
 
 } */
@@ -29,6 +35,7 @@ section {
     text-transform: uppercase;
     font-family: var(--font-primary);
 }
+
 .latestProjects .top .title {
     color: #fff;
     margin-top: 15px;
@@ -44,6 +51,7 @@ section {
         padding-left: 16px;
         padding-right: 16px;
     }
+
     /* .latestProjects .top .smTitle {
 
     } */
@@ -52,6 +60,7 @@ section {
         line-height: 32px;
     }
 }
+
 @media (max-width: 450px) {
     .latestProjects .top .title {
         font-size: 18px;
@@ -63,7 +72,9 @@ section {
     margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 50px;
 }
+
 .latestProjects .projectsList .projItem {
     -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
@@ -73,16 +84,19 @@ section {
     padding-left: 15px;
     padding-right: 15px;
 }
+
 @media (max-width: 992px) {
     .latestProjects .projectsList .projItem {
         width: 50%;
-    }   
+    }
 }
+
 @media (max-width: 576px) {
     .latestProjects .projectsList .projItem {
         width: 100%;
-    }   
+    }
 }
+
 .latestProjects .projectsList .projItem .itemWrapper {
     padding: 50px;
     background: #FF6600;
@@ -90,6 +104,7 @@ section {
     height: 100%;
     border-radius: 2px;
 }
+
 .latestProjects .projectsList .projItem .image {
     display: flex;
     align-items: center;
@@ -101,16 +116,19 @@ section {
     width: 80px;
     margin-bottom: 25px;
 }
+
 .latestProjects .projectsList .projItem .image:first-of-type img {
     width: 36px;
     height: 40px;
     object-fit: cover;
 }
+
 .latestProjects .projectsList .projItem .image img {
     width: 40px;
     height: 40px;
     object-fit: cover;
 }
+
 .latestProjects .projectsList .projItem .projNum {
     color: #fff;
     margin-bottom: 0px;
@@ -121,9 +139,11 @@ section {
     align-items: center;
     gap: 6px;
 }
+
 .latestProjects .projectsList .projItem .projNum svg {
     font-size: 32px;
 }
+
 .latestProjects .projectsList .projItem .projText {
     font-weight: 600;
     font-size: 16px;

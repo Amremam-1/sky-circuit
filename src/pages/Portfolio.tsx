@@ -69,8 +69,8 @@ const Portfolio = () => {
         <Container>
           <Row>
             <Col lg="12" className={styles.title}>
-              <span className="span-title">آخر المشاريع</span>
-              <h3 className="section-title">أعمالنا الأخيرة</h3>
+              <span className="span-title">LATEST PROJECTS</span>
+              <h3 className="section-title">OUR RECENT WORK</h3>
             </Col>
           </Row>
         </Container>
@@ -108,8 +108,8 @@ const Portfolio = () => {
               <a href="#">
                 <img src={slide.img} alt="" />
                 <div className={styles.slideText}>
-                  <h5>بناء مصنع زيت</h5>
-                  <span>البناء، التجديد</span>
+                  <h5>Oil Mill Construction</h5>
+                  <span>Building, Renovation</span>
                 </div>
               </a>
             </SwiperSlide>
@@ -121,8 +121,8 @@ const Portfolio = () => {
         <Container>
           <Row>
             <Col lg="12" className={styles.title}>
-              <span className="span-title">خبير تقني</span>
-              <h3 className="section-title">خبراؤنا التقنيين</h3>
+              <span className="span-title">TECHNICAL EXPART</span>
+              <h3 className="section-title">OUR TECHNICAL EXPERTS</h3>
             </Col>
           </Row>
 

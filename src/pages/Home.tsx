@@ -6,6 +6,7 @@ import Services from "./Services"
 import Portfolio from "./Portfolio"
 import About from "./About"
 import Blog from "./Blog"
+import GetInTouch from "../components/getInTouch/GetInTouch"
 
 const Home = () => {
   return (
@@ -17,9 +18,9 @@ const Home = () => {
       <section className={styles.services}>
         <Container>
           <Row>
-            <Col lg="12" className="text-center p-5" >
-              <span className="span-title">خدماتنا</span>
-              <h3 className="section-title">فرصة تقديم خدمة عالية الجودة</h3>
+            <Col lg="12" className="text-center p-5">
+              <span className="span-title">OUR SERVICES</span>
+              <h3 className="section-title">QUALITY SERVICING OPPORTUNITY</h3>
             </Col>
             <Services />
           </Row>
@@ -28,6 +29,7 @@ const Home = () => {
       <About />
       <Portfolio />
       <Blog />
+      <GetInTouch />
     </Helmet>
   )
 }

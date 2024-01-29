@@ -68,7 +68,7 @@ body {
   position: relative;
   overflow-x: hidden;
   background: #F2F3F5;
-  direction: rtl;
+  /* direction: rtl; */
 }
 
 h1,

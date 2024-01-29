@@ -1,7 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap"
 import styles from "../styles/about.module.css"
 import service04 from "../assets/01.jpg"
-import { FaArrowLeft } from "react-icons/fa"
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa"
 
 import { useState } from "react"
 import { FaCheck } from "react-icons/fa"
@@ -33,26 +33,26 @@ const About = () => {
                   <span>3526</span>
                 </h3>
 
-                <span className={styles.sub}>بدأ الرحلة</span>
+                <span className={styles.sub}>STARTED JOURNEY</span>
               </div>
               <div className={styles.right}>
                 <div className={styles.single}>
-                  <span>حلاً طارئًا في أي وقت</span>
+                  <span>Emerjency solution anytime</span>
                   <FaCheck className={styles.icon} />
                 </div>
                 <div className={styles.single}>
-                  <span>سعر مناسب لمدة تصل إلى 2 سنة</span>
+                  <span>Affordable price upto 2 years</span>
                   <FaCheck className={styles.icon} />
                 </div>
                 <div className={styles.single}>
-                  <span>فريق موثوق وذو خبرة</span>
+                  <span>Reliable & Experienced Team</span>
                   <FaCheck className={styles.icon} />
                 </div>
               </div>
             </div>
 
             <button className={styles.btn}>
-              <a href="#">إبدا الان</a>
+              <a href="#">Get STARTED</a>
             </button>
           </>
         )
@@ -71,26 +71,26 @@ const About = () => {
                   <span>2026</span>
                 </h3>
 
-                <span className={styles.sub}>بدأ الرحلة</span>
+                <span className={styles.sub}>STARTED JOURNEY</span>
               </div>
               <div className={styles.right}>
                 <div className={styles.single}>
+                  <span>Emerjency solution anytime</span>
                   <FaCheck className={styles.icon} />
-                  <span>حلاً طارئًا في أي وقت</span>
                 </div>
                 <div className={styles.single}>
+                  <span>Affordable price upto 2 years</span>
                   <FaCheck className={styles.icon} />
-                  <span>سعر مناسب لمدة تصل إلى 2 سنة</span>
                 </div>
                 <div className={styles.single}>
+                  <span>Reliable & Experienced Team</span>
                   <FaCheck className={styles.icon} />
-                  <span>فريق موثوق وذو خبرة</span>
                 </div>
               </div>
             </div>
 
             <button className={styles.btn}>
-              <a href="#">إبدا الان</a>
+              <a href="#">Get STARTED</a>
             </button>
           </>
         )
@@ -108,7 +108,7 @@ const About = () => {
                   <span>1026</span>
                 </h3>
 
-                <span className={styles.sub}>بدأ الرحلة</span>
+                <span className={styles.sub}>STARTED JOURNEY</span>
               </div>
               <div className={styles.right}>
                 <div className={styles.single}>
@@ -130,7 +130,7 @@ const About = () => {
             </div>
 
             <button className={styles.btn}>
-              <a href="#">إبدا الان</a>
+              <a href="#">Get STARTED</a>
             </button>
           </>
         )
@@ -149,21 +149,23 @@ const About = () => {
 
               <div className={styles.detail}>
                 <h5>
-                  المُطور الرائد للمشاريع التجارية <br />
-                  والسكنية
+                  Leading Developer Of Commercial
+                  <br />& Residential Projects
                 </h5>
 
                 <a href="#">
-                  اقرأ المزيد
-                  <FaArrowLeft className={styles.icon} />
+                  Read More
+                  <FaArrowRight className={styles.icon} />
                 </a>
               </div>
             </div>
 
             <div className={styles.wrapperInfo}>
               <div className={styles.leftTitle}>
-                <span>أحدث المشاريع</span>
-                <h3 className={styles.title}>نحن مؤهلون في كل أقسام العمل</h3>
+                <span>LATEST PROJECTS</span>
+                <h3 className={styles.title}>
+                  WE ARE QUALIFIED IN EVERY WORKING DEPARTMENTS
+                </h3>
               </div>
 
               <div className={styles.start}>
@@ -175,7 +177,7 @@ const About = () => {
                       }`}
                       onClick={() => handleButton("About")}
                     >
-                      حول
+                      About
                     </button>
                   </li>
                   <li className={styles.navItem}>
@@ -185,7 +187,7 @@ const About = () => {
                       }`}
                       onClick={() => handleButton("Vision")}
                     >
-                      رؤية
+                      Vision
                     </button>
                   </li>
                   <li className={styles.navItem}>
@@ -195,7 +197,7 @@ const About = () => {
                       }`}
                       onClick={() => handleButton("Contact")}
                     >
-                      اتصل بنا
+                      Contact
                     </button>
                   </li>
                 </ul>

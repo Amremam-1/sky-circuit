@@ -70,7 +70,7 @@
     flex: 0.4;
     background: #FFFFFF;
     height: 100%;
-    padding: 40px 50px;
+    padding: 40px 30px;
 }
 
 .leftTitle {
@@ -181,10 +181,10 @@
 
 .single span {
     font-weight: 400;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 32px;
     color: #0C0A0A;
-    margin-right: 15px;
+    margin-right: 10px;
 }
 
 .btn {

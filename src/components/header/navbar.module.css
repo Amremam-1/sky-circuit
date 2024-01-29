@@ -22,17 +22,21 @@
     position: relative;
     padding-right: 25px;
 }
-
+.icon{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
 .left p {
     font-weight: 600;
     color: #6E777D;
     font-family: var(--font-primary);
 }
 
-.left::after {
+.left::before {
     position: absolute;
     content: "";
-    left: 0;
+    right: 0;
     height: 67px;
     width: 1px;
     background: #d1d1d1;
@@ -72,10 +76,10 @@
 }
 
 
-.right .menu li::after {
+.right .menu li::before {
     position: absolute;
     content: "";
-    left: 0;
+    right: 0;
     height: 67px;
     width: 1px;
     top: 50%;
